@@ -3,7 +3,7 @@
 // index.php — Homepage
 // ============================================
 
-require('pdo.php');
+require('secure_pdo.php');
 require('header.php');
 ?>
 
@@ -43,7 +43,7 @@ require('header.php');
     <!-- Not logged in view -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Secure Portal</h1>
+            <h1> Secure Portal</h1>
             <p>A PHP + MySQL authentication system with PDO, sessions, and modular templating.</p>
             <a href="login.php" class="btn-hero">Login →</a>
         </div>

@@ -8,7 +8,7 @@
 <footer class="site-footer">
     <div class="footer-inner">
         <p>© <?= date('Y') ?> SecurePortal — Built with PHP & MySQL</p>
-        <p class="footer-sub">Week 10 Assignment</p>
+        <p class="footer-sub">Class 1 Assignment: Dynamic Secure Portal</p>
     </div>
 </footer>
 

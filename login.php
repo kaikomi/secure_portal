@@ -1,9 +1,11 @@
 <?php
 // ============================================
-// login.php — Login Page
+// login.php — Login Page 
 // ============================================
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-require('pdo.php');    // get database connection ($pdo)
+require('secure_pdo.php');    // get database connection ($pdo)
 require('header.php'); // show header (also starts session)
 
 $error = '';
@@ -35,24 +37,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // 4. Check if user exists AND password matches the hash
         if ($user && password_verify($password, $user['password'])) {
-            // ✅ Login successful — save user info in session
             $_SESSION['user_id']  = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email']    = $user['email'];
 
-            header('Location: index.php'); // redirect to homepage
+            header('Location: index.php');
             exit;
         } else {
-            // ❌ Wrong username or password
             $error = 'Invalid username or password.';
         }
     }
 }
+
 ?>
 
 <main class="auth-page">
     <div class="auth-card">
-        <div class="auth-icon">🔐</div>
+        <div class="auth-icon"></div>
         <h1>Welcome Back</h1>
         <p class="auth-sub">Sign in to your account</p>
 
@@ -83,7 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     placeholder="Enter your password"
                     autocomplete="current-password"
                 >
-                <span class="toggle-pw" onclick="togglePassword()">Show</span>  // edit 
+                <span class="toggle-pw" onclick="togglePassword()">Show</span> 
             </div>
 
             <button type="submit" class="btn-submit">Login →</button>

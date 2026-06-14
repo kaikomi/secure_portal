@@ -1,13 +1,18 @@
 <?php
 // ============================================
-// pdo.php — Database Connection
+// secure_pdo.php — Database Connection
 // Include this file on any page that needs DB access
 // ============================================
 
-$host   = 'localhost';
-$dbname = 'secure_portal';
-$user   = 'root';     // XAMPP default username
-$pass   = '';         // XAMPP default password (empty)
+$host   = 'sql102.infinityfree.com';
+$dbname = 'if0_42162559_secure_portal';
+$user   = 'if0_42162559'; 
+$pass   = 'but3oHoQyHzy';       
+
+// $host   = 'localhost';
+// $dbname = 'secure_portal';
+// $user   = 'root';
+// $pass   = '';
 
 try {
     // PDO = PHP Data Objects — secure way to connect to MySQL

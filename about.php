@@ -3,7 +3,7 @@
 // about.php — About Page
 // ============================================
 
-require('pdo.php');
+require('secure_pdo.php');
 require('header.php');
 ?>
 
