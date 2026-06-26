@@ -6,7 +6,7 @@
 
 // Start session so we can check if user is logged in
 if (session_status() === PHP_SESSION_NONE) {
-    session_save_path(__DIR__ . '/tmp');
+    // session_save_path(__DIR__ . '/tmp');
     session_start();
 }
 
