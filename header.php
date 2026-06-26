@@ -36,6 +36,7 @@ $username   = $isLoggedIn ? htmlspecialchars($_SESSION['username']) : '';
                 <span class="user-badge">👤 <?= $username ?></span>
                 <a href="logout.php" class="btn-nav logout">Logout</a>
             <?php else: ?>
+                <a href="register.php" class="btn-nav" style="background:var(--bg3);border:1px solid var(--border);">Register</a>
                 <a href="login.php" class="btn-nav">Login</a>
             <?php endif; ?>
         </nav>

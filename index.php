@@ -46,6 +46,7 @@ require('header.php');
             <h1> Secure Portal</h1>
             <p>A PHP + MySQL authentication system with PDO, sessions, and modular templating.</p>
             <a href="login.php" class="btn-hero">Login →</a>
+            <a href="register.php" class="btn-hero" style="background:var(--bg3);border:1px solid var(--border);color:var(--text);margin-left:1rem;">Register</a>
         </div>
         <div class="hero-visual">
             <div class="code-block">
